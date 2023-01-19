@@ -1,0 +1,167 @@
+.about-achi {
+    margin-top: 3rem;
+}
+
+.about-achi-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+
+}
+
+
+
+.about-achi-right>p {
+    margin: 1.6rem 0 2.5rem;
+}
+
+.achi-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+}
+
+.achi-card {
+    background: var(--color-bg1);
+    padding: 1.6rem;
+    text-align: center;
+    border-radius: 1rem;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.achi-card:hover {
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.achi-icon {
+    background: var(--color-danger);
+    padding: 0.6rem;
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.achi-card:nth-child(2) .achi-icon {
+    background: var(--color-success)
+}
+
+.achi-card:nth-child(3) .achi-icon {
+    background: var(--color-primary)
+}
+
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.3);
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.team-member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    background: transparent;
+
+    border-color: var(--color-primary);
+}
+
+.team-member img {
+    filter: saturate(0);
+}
+
+.team-member:hover img {
+    filter: saturate(1);
+}
+
+.team-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+
+}
+
+.team-info * {
+    color: var(--color-light);
+
+}
+
+.team-social {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    transition: var(--transition);
+}
+
+.team-social a {
+    padding: 1rem;
+}
+
+.team-member:hover .team-social {
+    right: 0;
+}
+
+
+/* media quries */
+
+@media screen and (max-width: 768px) {
+    .about-achi {
+        margin-top: 2rem;
+    }
+
+    .about-achi-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .about-achi-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .team-member {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .achi-cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .team-member {
+        padding: 0;
+    }
+
+    .team-member p {
+        padding-bottom: 1.5rem;
+    }
+}
